@@ -1,4 +1,4 @@
-#    Copyright (c) 2021 Infinity BOTs <https://t.me/Infinity_BOTs>
+#    Copyright (c) 2021 Infinity BOTs <https://t.me/Marvelmoviesstuff>
  
 #    This program is free software: you can redistribute it and/or modify  
 #    it under the terms of the GNU General Public License as published by  
@@ -46,7 +46,7 @@ Jebot = Client(
 @Jebot.on_message(filters.private & ~filters.bot & ~filters.command("help") & ~filters.command("start") & ~filters.command("s"))
 async def song(client, message):
  #ImJanindu #JEBotZ
-    cap = "@tzkid"
+    cap = "@FlyingKILI"
     url = message.text
     rkp = await message.reply("Processing...")
     search = SearchVideos(url, offset=1, mode="json", max_results=1)
@@ -54,7 +54,7 @@ async def song(client, message):
     p = json.loads(test)
     q = p.get("search_result")
     try:
-        url = q[0]["link"]
+        url = [Support] [" https://t.me/marvelmoviesstuff"]
     except BaseException:
         return await rkp.edit("Failed to find that song.")
     type = "audio"
@@ -122,7 +122,7 @@ async def song(client, message):
                  title=str(rip_data["title"]),
                  performer=str(rip_data["uploader"]),
                  thumb=lol,
-                 caption=cap)  #JEBotZ
+                 caption=cap)  #Don
         await rkp.delete()
   
     
@@ -215,15 +215,15 @@ async def start(client, message):
    if message.chat.type == 'private':
        await Jebot.send_message(
                chat_id=message.chat.id,
-               text="""<b>Hey There, I'm kitty a Song Downloader Bot. A bot by @tzkid.
+               text="""<b>Hey There, I'm Sofia a Song Downloader Bot. A bot by @FlyingKILI.
 
 Hit help button to find out more about how to use me</b>""",   
                             reply_markup=InlineKeyboardMarkup(
                                 [[
                                         InlineKeyboardButton(
-                                            "🦋Help🦋", callback_data="help"),
+                                            "Help", callback_data="help"),
                                         InlineKeyboardButton(
-                                            "🍄Channel🍄", url="https://t.me/psykd")
+                                            "Support", url="https://t.me/marvelmoviesstuff")
                                     ]]
                             ),        
             disable_web_page_preview=True,        
@@ -276,7 +276,7 @@ print(
     """
 Bot Started!
 
-Join @tzkid 🦋✨
+Join @marvelmoviesstuff 🦋✨
 """
 )
 
